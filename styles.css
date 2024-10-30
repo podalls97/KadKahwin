@@ -437,9 +437,18 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) {
   .invitation-title, .ring-svg-container, .bride-groom-svg-container, .arabic-greeting {
     width: 100%;
+    top: 15%;
+  }
+
+  .arabic-greeting {
+    font-size: 2.3rem;
+  }
+
+  .invitation-title {
+    font-size: 2.5rem;
   }
 
   .bride-groom-shortname-container {
@@ -462,7 +471,7 @@ body {
   }
 
 .splash-title {
-    font-size: 5rem; /* Smaller font size for title */
+    font-size: 4rem; /* Smaller font size for title */
   }
 
 .splash-name-image {
@@ -488,7 +497,7 @@ body {
   }
 
   .leaf-3 {
-    top: 20%;
+    top: 7%;
     right: 4%;
   }
 
@@ -606,7 +615,7 @@ body {
 
   .countdown-timer {
     flex-direction: row; /* Ensure horizontal layout */
-    gap: 30px; /* Reduce gap between items for smaller screens */
+    gap: 10px; /* Reduce gap between items for smaller screens */
     width: 100%; /* Full width for the timer */
     justify-content: center; /* Center the timer items */
   }
