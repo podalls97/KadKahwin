@@ -14,7 +14,7 @@
   }
   
   body {
-    background-image: url('src/Asset 41.svg');
+    background-image: url('src/bg1.png');
     background-size: cover;
     background-position: center; /* Centers the background */
     background-repeat: no-repeat;
@@ -98,6 +98,13 @@
     position: relative;
     overflow: hidden;
   }
+
+  /* Fade-out transition for splash screen and background blur */
+.splash-exit {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-out, visibility 1s ease-out;
+}
   
   /* Other styling for specific elements */
   .leaves-overlay, .golden-leaves {
