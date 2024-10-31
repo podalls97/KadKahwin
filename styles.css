@@ -1,639 +1,639 @@
 /* Global styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lora', serif;
-}
-
-/* Remove height constraint from html and body */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-body {
-  background-image: url('src/Asset 41.svg');
-  background-size: cover;
-  background-position: center; /* Centers the background */
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Keeps the background fixed as content scrolls */
-  color: #333;
-}
-
-/* Wrapper and sections */
-.wrapper {
-  position: relative;
-}
-
-.hero, .save-the-date, #countdown-container {
-  position: relative;
-  min-height: 100vh; /* Ensures each section takes up full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  overflow: hidden;
-  background: none; /* Remove any specific background on sections */
-}
-
-/* Background Blur Layer with Gaussian Blur Effect */
-#background-blur {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  z-index: 998;
-  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-}
-
-/* Splash Screen Overlay */
-#splash-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-  background-image: url('src/spash_screen.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Centered Content on Splash Screen */
-.splash-title {
-  font-size: 2.8rem;
-  color: #b45f06;
-  font-family: 'Great Vibes', cursive;
-  margin-bottom: 20px;
-}
-
-.splash-name-image {
-  width: 500px;
-  filter: drop-shadow(2px 4px 5px gray);
-}
-
-.splash-button {
-  font-size: 1.5rem;
-  color: #fff;
-  background: linear-gradient(135deg, #b45f06, #e3a002);
-  border: none;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-family: 'Reem Kufi Fun', sans-serif;
-  border-radius: 30px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Other styling for specific elements */
-.leaves-overlay, .golden-leaves {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.leaf-1 {
-  position: absolute;
-  width: 200px;
-  top: 0%;
-  right: -1%;
-  rotate: 180deg;
-}
-
-.leaf-2 {
-  position: absolute;
-  width: 300px;
-  top: 70%;
-  right: 2%;
-  rotate: 220deg;
-}
-
-.leaf-3 {
-  position: absolute;
-  width: 100px;
-  top: 48%;
-  right: 20%;
-}
-
-.leaf-4 {
-  position: absolute;
-  width: 100px;
-  top: 5%;
-  left: 10%;
-  rotate: 220deg;
-}
-
-.leaf-5 {
-  position: absolute;
-  width: 300px;
-  top: 70%;
-  left: 4%;
-  rotate: 200deg;
-}
-
-
-
-.leaves-1 {
-  position: absolute;
-  width: 100px;
-  top: 15%;
-  left: 30%;
-}
-
-.leaves-2 {
-  position: absolute;
-  width: 200px;
-  top: 75%;
-  left: 25%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+  }
   
-}
-
-.leaves-3 {
-  position: absolute;
-  width: 400px;
-  top: 65%;
-  left: 75%;
-  rotate: 180deg;
-}
-
-.leaves-4 {
-  position: absolute;
-  width: 100px;
-  top: 25%;
-  left: 25%;
-}
-
-.leaves-5 {
-  position: absolute;
-  width: 100px;
-  top: 35%;
-  left: 70%;
-}
-
-.leaf-6 {
-  position: absolute;
-  width: 100px;
-  top: 15%;
-  left: 70%;
-}
-
-.leaf-7 {
-  position: absolute;
-  top: -5%;
-  right: -6%;
-  rotate: -20deg;
-}
-
-.leaf-8 {
-  position: absolute;
-  width: 500px;
-  top: 0%;
-  left: -10%;
-  rotate: 240deg;
-}
-
-.leaf-9 {
-  position: absolute;
-  rotate: 190deg;
-  width: 400px;
-  left: 0%;
-  top: 50%;
-}
-
-.leaf-10 {
-  position: absolute;
-  top: 10%;
-  right: -1%;
-  rotate: -20deg;
-}
-
-.flower-1 {
-  position: absolute;
-  width: 300px;
-  bottom: 0%;
-  right: 39%;
-}
-
-
-
-
-
-
-
-
-
-
-.arabic-greeting,
-.invitation-title,
-.ring-svg-container,
-.bride-groom-shortname-container,
-.bride-groom-svg-container,
-.arabic-phrase,
-.majlis-text,
-.save-the-date-svg-container,
-.instruction,
-.countdown-title,
-.countdown-timer {
-  z-index: 9999;
-  color: #b45f06;
-  font-family: 'Great Vibes', cursive;
-  text-align: center;
-}
-
-.arabic-greeting {
-  position: relative;
-  margin-top: -70px;
-  text-align: center;
-  font-size: 2.5rem;
-}
-
-.invitation-title {
-  position: relative;
-  text-align: center;
-  font-size: 2rem;
-}
-
-.ring-svg-container {
-  position: relative;
-  width: 120px !important;
-  max-width: 100% !important;
-  left: 40%;
+  /* Remove height constraint from html and body */
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
   
-  margin-bottom: -70px;
-}
-
-
-.bride-groom-shortname-container {
-  position: relative;
-  width: 400px !important;
-  max-width: 200% !important;
-}
-
-.bride-groom-shortname-container img {
-  width: 100% !important;
-  height: auto !important;
-  max-width: inherit;
-}
-
-.bride-groom-svg-container {
-  position: relative;
-  margin-top: -80px;
-  width: 400px !important;
-  max-width: 100% !important;
-  
-}
-
-.bride-groom-svg-container img {
-  width: 100% !important;
-  height: auto !important;
-  max-width: inherit;
-}
-
-.arabic-phrase {
-  position: relative;
-  margin-top: -70px;
-  text-align: center;
-  font-size: 3rem;
-}
-
-.majlis-text {
-  position: relative;
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: -20px;
-}
-
-.save-the-date-svg-container {
-  position: relative;
-  width: 700px !important;
-  max-width: 200% !important;
-}
-
-.save-the-date-svg-container img {
-  width: 100% !important;
-  height: auto !important;
-  max-width: inherit;
-}
-
-.maps-svg-container {
-  position: relative;
-  width: 700px !important;
-  max-width: 200% !important;
-  margin-top: -50px;
-  z-index: 10000;
-  
-}
-
-.maps-svg-container img {
-  width: 100% !important;
-  height: auto !important;
-  max-width: inherit;
-}
-
-.instruction {
-  font-size: 2rem;
-  margin-bottom: -120px;
-}
-
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1; /* Lowered to ensure it's behind all content */
-  pointer-events: none;
-}
-
-
-
-
-
-
-
-/* Countdown Container Styling */
-#countdown-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 60px 0; /* Increase padding for a more spacious layout */
-}
-
-.countdown-timer {
-  display: flex;
-  gap: 30px; /* Increase gap between items */
-  justify-content: center;
-}
-
-.countdown-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #ffffff;
-  border: 3px solid #b45f06; /* Thicker border for a bolder look */
-  border-radius: 10px; /* Slightly larger border radius */
-  padding: 25px 40px; /* Increase padding for a bigger container */
-  width: 120px; /* Increase width */
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Larger shadow for more emphasis */
-}
-
-/* Optional: Increase the font size for numbers and labels */
-.countdown-number {
-  font-size: 3rem; /* Increase font size for numbers */
-  color: #b45f06;
-  font-family: 'Reem Kufi Fun', sans-serif;
-  margin-bottom: 5px;
-}
-
-.countdown-label {
-  font-size: 1rem; /* Increase font size for labels */
-  color: #333;
-  font-family: 'Reem Kufi Fun', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.countdown-title {
-  font-size: 7rem;
-}
-
-
-/* Media Queries */
-@media (max-width: 1024px) {
-  .arabic-greeting, .invitation-title, .ring-svg-container,
-  .bride-groom-shortname-container, .bride-groom-svg-container,
-  .save-the-date-svg-container, .maps-svg-container, .majlis-text,
-  .instruction {
-    width: 80%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .arabic-greeting, .invitation-title, .ring-svg-container,
-  .bride-groom-shortname-container, .bride-groom-svg-container,
-  .save-the-date-svg-container, .maps-svg-container, .majlis-text,
-  .instruction {
-    width: 90%;
-    text-align: center;
-  }
-}
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) {
-  .invitation-title, .ring-svg-container, .bride-groom-svg-container, .arabic-greeting {
-    width: 100%;
-    top: 15%;
-  }
-
-  .arabic-greeting {
-    font-size: 2.3rem;
-  }
-
-  .invitation-title {
-    font-size: 2.5rem;
-  }
-
-  .bride-groom-shortname-container {
-    left: -2%;
-  }
-
-  .ring-svg-container {
-    left: 35%;
-  }
-
-  .bride-groom-svg-container {
-    top: 5%;
-    left: -1%;
-  }
-
-  #splash-screen {
+  body {
+    background-image: url('src/Asset 41.svg');
     background-size: cover;
-    background-position: center;
+    background-position: center; /* Centers the background */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed as content scrolls */
+    color: #333;
+  }
+  
+  /* Wrapper and sections */
+  .wrapper {
+    position: relative;
+  }
+  
+  .hero, .save-the-date, #countdown-container {
+    position: relative;
+    min-height: 100vh; /* Ensures each section takes up full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+    background: none; /* Remove any specific background on sections */
+  }
+  
+  /* Background Blur Layer with Gaussian Blur Effect */
+  #background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 998;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
   }
-
-.splash-title {
-    font-size: 4rem; /* Smaller font size for title */
+  
+  /* Splash Screen Overlay */
+  #splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    background-image: url('src/spash_screen.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-
-.splash-name-image {
+  
+  /* Centered Content on Splash Screen */
+  .splash-title {
+    font-size: 2.8rem;
+    color: #b45f06;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 20px;
+  }
+  
+  .splash-name-image {
+    width: 500px;
+    filter: drop-shadow(2px 4px 5px gray);
+  }
+  
+  .splash-button {
+    font-size: 1.5rem;
+    color: #fff;
+    background: linear-gradient(135deg, #b45f06, #e3a002);
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-family: 'Reem Kufi Fun', sans-serif;
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Other styling for specific elements */
+  .leaves-overlay, .golden-leaves {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: -1;
   }
-
-.splash-button {
-    font-size: 1.2rem; /* Smaller button text size */
-    padding: 10px 20px;
-    margin-top: 100px;
-  }
-
-  .leaf-1, .leaf-2, .leaf-3, .leaf-4, .leaf-5 {
-    width: 20%;
-  }
-
+  
   .leaf-1 {
+    position: absolute;
+    width: 200px;
     top: 0%;
+    right: -1%;
+    rotate: 180deg;
   }
-
+  
   .leaf-2 {
-    top: 80%;
+    position: absolute;
+    width: 300px;
+    top: 70%;
+    right: 2%;
+    rotate: 220deg;
   }
-
+  
   .leaf-3 {
-    top: 7%;
-    right: 4%;
+    position: absolute;
+    width: 100px;
+    top: 48%;
+    right: 20%;
   }
-
+  
   .leaf-4 {
-    top: -2%;
-    left: -1%;
-    rotate: 90deg;
-  }
-
-  .flower-1 {
-    left: 15%;
-  }
-
-  .leaves-1, .leaves-2, .leaves-3, .leaves-4, .leaves-5, .leaf-6, .leaf-10, .leaf-7, .leaf-8, .leaf-9 {
-    width: 35%;
-  }
-
-  .leaves-1 {
-    top: 10%;
-    rotate: 180deg;
-    left: 0%;
-  }
-
-  .leaves-2 {
-    top: 90%;
-  }
-
-  .leaves-3 {
-    width: 20%;
-    top: 20%;
-    left: -4%;
-    rotate: 10deg;
-  }
-
-  .leaves-4 {
-    rotate: 180deg;
-    top: 0%;
-    width: 20%;
-  }
-
-  .leaves-5 {
-    rotate: 100deg;
-    top: 80%;
-    width: 25%;
-    left: 80%;
-  }
-
-  .leaf-6 {
-    top: 90%;
-    left: 0%;
-  }
-
-  .leaf-10 {
+    position: absolute;
+    width: 100px;
     top: 5%;
-    right: -10%;
+    left: 10%;
+    rotate: 220deg;
   }
-
-  .leaf-7 {
-    top: 0%;
+  
+  .leaf-5 {
+    position: absolute;
+    width: 300px;
+    top: 70%;
+    left: 4%;
+    rotate: 200deg;
   }
-
-  .leaf-8 {
-    top: 0%;
+  
+  
+  
+  .leaves-1 {
+    position: absolute;
+    width: 100px;
+    top: 15%;
+    left: 30%;
   }
-
-  .leaf-9 {
-    top: 85%;
+  
+  .leaves-2 {
+    position: absolute;
+    width: 200px;
+    top: 75%;
+    left: 25%;
+    
+  }
+  
+  .leaves-3 {
+    position: absolute;
+    width: 400px;
+    top: 65%;
+    left: 75%;
+    rotate: 180deg;
+  }
+  
+  .leaves-4 {
+    position: absolute;
+    width: 100px;
+    top: 25%;
+    left: 25%;
+  }
+  
+  .leaves-5 {
+    position: absolute;
+    width: 100px;
+    top: 35%;
     left: 70%;
-    rotate: 80deg;
   }
-
-  .arabic-phrase {
-    margin-top: -10%;
+  
+  .leaf-6 {
+    position: absolute;
+    width: 100px;
+    top: 15%;
+    left: 70%;
   }
-
-  .majlis-text {
-    margin-top: 10%;
-    margin-bottom: 10%;
+  
+  .leaf-7 {
+    position: absolute;
+    top: -5%;
+    right: -6%;
+    rotate: -20deg;
+  }
+  
+  .leaf-8 {
+    position: absolute;
+    width: 500px;
+    top: 0%;
+    left: -10%;
+    rotate: 240deg;
+  }
+  
+  .leaf-9 {
+    position: absolute;
+    rotate: 190deg;
+    width: 400px;
+    left: 0%;
+    top: 50%;
+  }
+  
+  .leaf-10 {
+    position: absolute;
+    top: 10%;
+    right: -1%;
+    rotate: -20deg;
+  }
+  
+  .flower-1 {
+    position: absolute;
+    width: 300px;
+    bottom: 0%;
+    right: 39%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .arabic-greeting,
+  .invitation-title,
+  .ring-svg-container,
+  .bride-groom-shortname-container,
+  .bride-groom-svg-container,
+  .arabic-phrase,
+  .majlis-text,
+  .save-the-date-svg-container,
+  .instruction,
+  .countdown-title,
+  .countdown-timer {
+    z-index: 9999;
+    color: #b45f06;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+  }
+  
+  .arabic-greeting {
+    position: relative;
+    margin-top: -70px;
+    text-align: center;
     font-size: 2.5rem;
   }
-
-  .save-the-date-svg-container {
-    width: 100% !important; 
-    max-width: 450px !important; 
-    height: auto !important; 
+  
+  .invitation-title {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
   }
-
+  
+  .ring-svg-container {
+    position: relative;
+    width: 120px !important;
+    max-width: 100% !important;
+    left: 40%;
+    
+    margin-bottom: -70px;
+  }
+  
+  
+  .bride-groom-shortname-container {
+    position: relative;
+    width: 400px !important;
+    max-width: 200% !important;
+  }
+  
+  .bride-groom-shortname-container img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: inherit;
+  }
+  
+  .bride-groom-svg-container {
+    position: relative;
+    margin-top: -80px;
+    width: 400px !important;
+    max-width: 100% !important;
+    
+  }
+  
+  .bride-groom-svg-container img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: inherit;
+  }
+  
+  .arabic-phrase {
+    position: relative;
+    margin-top: -70px;
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  .majlis-text {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: -20px;
+  }
+  
+  .save-the-date-svg-container {
+    position: relative;
+    width: 700px !important;
+    max-width: 200% !important;
+  }
+  
   .save-the-date-svg-container img {
     width: 100% !important;
     height: auto !important;
-    margin-left: -3%;
-    margin-top: -10%;
+    max-width: inherit;
   }
-
-  .maps-svg-container {
-    width: 100% !important; 
-    max-width: 450px !important; 
-    height: auto !important;
-    top: 3%; 
-  }
-
-  .instruction {
-    margin-top: 10%;
-  }
-
-  /* Countdown Container Resizing */
-  #countdown-container {
-    padding: 30px 0; /* Reduce padding */
-  }
-
-  .countdown-title {
-    font-size: 4rem; /* Smaller title font size */
-    padding-bottom: 30px;
-  }
-
-  .countdown-timer {
-    flex-direction: row; /* Ensure horizontal layout */
-    gap: 10px; /* Reduce gap between items for smaller screens */
-    width: 100%; /* Full width for the timer */
-    justify-content: center; /* Center the timer items */
-  }
-
-  .countdown-item {
-    padding: 10px 40px; /* Smaller padding */
-    width: 60px; /* Smaller width for countdown items */
-    border-radius: 8px; /* Adjust border radius */
-  }
-
-  .countdown-number {
-    font-size: 2rem; /* Reduced number font size */
-  }
-
-  .countdown-label {
-    font-size: 0.8rem; /* Reduced label font size */
-  }
-}
-
-
   
+  .maps-svg-container {
+    position: relative;
+    width: 700px !important;
+    max-width: 200% !important;
+    margin-top: -50px;
+    z-index: 10000;
+    
+  }
+  
+  .maps-svg-container img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: inherit;
+  }
+  
+  .instruction {
+    font-size: 2rem;
+    margin-bottom: -120px;
+  }
+  
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* Lowered to ensure it's behind all content */
+    pointer-events: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* Countdown Container Styling */
+  #countdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 0; /* Increase padding for a more spacious layout */
+  }
+  
+  .countdown-timer {
+    display: flex;
+    gap: 30px; /* Increase gap between items */
+    justify-content: center;
+  }
+  
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    border: 3px solid #b45f06; /* Thicker border for a bolder look */
+    border-radius: 10px; /* Slightly larger border radius */
+    padding: 25px 40px; /* Increase padding for a bigger container */
+    width: 120px; /* Increase width */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Larger shadow for more emphasis */
+  }
+  
+  /* Optional: Increase the font size for numbers and labels */
+  .countdown-number {
+    font-size: 3rem; /* Increase font size for numbers */
+    color: #b45f06;
+    font-family: 'Reem Kufi Fun', sans-serif;
+    margin-bottom: 5px;
+  }
+  
+  .countdown-label {
+    font-size: 1rem; /* Increase font size for labels */
+    color: #333;
+    font-family: 'Reem Kufi Fun', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .countdown-title {
+    font-size: 7rem;
+  }
+  
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .arabic-greeting, .invitation-title, .ring-svg-container,
+    .bride-groom-shortname-container, .bride-groom-svg-container,
+    .save-the-date-svg-container, .maps-svg-container, .majlis-text,
+    .instruction {
+      width: 80%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .arabic-greeting, .invitation-title, .ring-svg-container,
+    .bride-groom-shortname-container, .bride-groom-svg-container,
+    .save-the-date-svg-container, .maps-svg-container, .majlis-text,
+    .instruction {
+      width: 90%;
+      text-align: center;
+    }
+  }
+  
+  @media only screen and (min-width: 414px) and (max-width: 414px) and (min-height: 896px) and (max-height: 896px) and (orientation: portrait) {
+    .invitation-title, .ring-svg-container, .bride-groom-svg-container, .arabic-greeting {
+      width: 100%;
+      top: 15%;
+    }
+  
+    .arabic-greeting {
+      font-size: 2.3rem;
+    }
+  
+    .invitation-title {
+      font-size: 2.5rem;
+    }
+  
+    .bride-groom-shortname-container {
+      left: -2%;
+    }
+  
+    .ring-svg-container {
+      left: 35%;
+    }
+  
+    .bride-groom-svg-container {
+      top: 5%;
+      left: -1%;
+    }
+  
+    #splash-screen {
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+  
+  .splash-title {
+      font-size: 4rem; /* Smaller font size for title */
+    }
+  
+  .splash-name-image {
+      width: 100%;
+    }
+  
+  .splash-button {
+      font-size: 1.2rem; /* Smaller button text size */
+      padding: 10px 20px;
+      margin-top: 100px;
+    }
+  
+    .leaf-1, .leaf-2, .leaf-3, .leaf-4, .leaf-5 {
+      width: 20%;
+    }
+  
+    .leaf-1 {
+      top: 0%;
+    }
+  
+    .leaf-2 {
+      top: 80%;
+    }
+  
+    .leaf-3 {
+      top: 7%;
+      right: 4%;
+    }
+  
+    .leaf-4 {
+      top: -2%;
+      left: -1%;
+      rotate: 90deg;
+    }
+  
+    .flower-1 {
+      left: 15%;
+    }
+  
+    .leaves-1, .leaves-2, .leaves-3, .leaves-4, .leaves-5, .leaf-6, .leaf-10, .leaf-7, .leaf-8, .leaf-9 {
+      width: 35%;
+    }
+  
+    .leaves-1 {
+      top: 10%;
+      rotate: 180deg;
+      left: 0%;
+    }
+  
+    .leaves-2 {
+      top: 90%;
+    }
+  
+    .leaves-3 {
+      width: 20%;
+      top: 20%;
+      left: -4%;
+      rotate: 10deg;
+    }
+  
+    .leaves-4 {
+      rotate: 180deg;
+      top: 0%;
+      width: 20%;
+    }
+  
+    .leaves-5 {
+      rotate: 100deg;
+      top: 80%;
+      width: 25%;
+      left: 80%;
+    }
+  
+    .leaf-6 {
+      top: 90%;
+      left: 0%;
+    }
+  
+    .leaf-10 {
+      top: 5%;
+      right: -10%;
+    }
+  
+    .leaf-7 {
+      top: 0%;
+    }
+  
+    .leaf-8 {
+      top: 0%;
+    }
+  
+    .leaf-9 {
+      top: 85%;
+      left: 70%;
+      rotate: 80deg;
+    }
+  
+    .arabic-phrase {
+      margin-top: -10%;
+    }
+  
+    .majlis-text {
+      margin-top: 10%;
+      margin-bottom: 10%;
+      font-size: 2.5rem;
+    }
+  
+    .save-the-date-svg-container {
+      width: 100% !important; 
+      max-width: 450px !important; 
+      height: auto !important; 
+    }
+  
+    .save-the-date-svg-container img {
+      width: 100% !important;
+      height: auto !important;
+      margin-left: -3%;
+      margin-top: -10%;
+    }
+  
+    .maps-svg-container {
+      width: 100% !important; 
+      max-width: 450px !important; 
+      height: auto !important;
+      top: 3%; 
+    }
+  
+    .instruction {
+      margin-top: 10%;
+    }
+  
+    /* Countdown Container Resizing */
+    #countdown-container {
+      padding: 30px 0; /* Reduce padding */
+    }
+  
+    .countdown-title {
+      font-size: 4rem; /* Smaller title font size */
+      padding-bottom: 30px;
+    }
+  
+    .countdown-timer {
+      flex-direction: row; /* Ensure horizontal layout */
+      gap: 10px; /* Reduce gap between items for smaller screens */
+      width: 100%; /* Full width for the timer */
+      justify-content: center; /* Center the timer items */
+    }
+  
+    .countdown-item {
+      padding: 10px 40px; /* Smaller padding */
+      width: 60px; /* Smaller width for countdown items */
+      border-radius: 8px; /* Adjust border radius */
+    }
+  
+    .countdown-number {
+      font-size: 2rem; /* Reduced number font size */
+    }
+  
+    .countdown-label {
+      font-size: 0.8rem; /* Reduced label font size */
+    }
+  }
+  
+  
+    
