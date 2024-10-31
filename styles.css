@@ -670,7 +670,7 @@
   
     .arabic-greeting {
       font-size: 1.5rem;
-      margin-top: -80%;
+      margin-top: -50%;
     }
   
     .invitation-title {
@@ -756,7 +756,7 @@
     }
   
     .flower-1 {
-      bottom: 26%;
+      top: 75%;
       width: 55%;
       left: 20%;
     }
@@ -820,7 +820,7 @@
     }
   
     .arabic-phrase {
-      margin-top: -70%;
+      margin-top: -40%;
       font-size: 2rem;
     }
   
@@ -862,7 +862,7 @@
     .countdown-title {
       font-size: 3rem; /* Smaller title font size */
       padding-bottom: 30px;
-      margin-top: -50%;
+      margin-top: -20%;
     }
   
     .countdown-timer {
@@ -1110,6 +1110,4 @@
     .countdown-label {
       font-size: 0.8rem; /* Reduced label font size */
     }
-  }
-  
-    
+  } 
