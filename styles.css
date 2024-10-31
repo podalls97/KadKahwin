@@ -13,14 +13,20 @@
     overflow-x: hidden;
   }
   
-  body {
-    background-image: url('src/Asset 41.svg');
-    background-size: cover;
-    background-position: center; /* Centers the background */
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Keeps the background fixed as content scrolls */
-    color: #333;
-  }
+  /* Fixed Background Layer */
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('src/Asset 2.svg'); /* Update path to the new image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2; /* Lower than other content layers */
+  pointer-events: none;
+}
   
   /* Wrapper and sections */
   .wrapper {
@@ -53,23 +59,23 @@
   }
   
   /* Splash Screen Overlay */
-  #splash-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-    background-image: url('src/spash_screen.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Higher than background layer */
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+  background-image: url('src/spash_screen.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
   
   /* Centered Content on Splash Screen */
   .splash-title {
