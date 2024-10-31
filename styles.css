@@ -717,9 +717,12 @@
   
     /* Make sure the body also has no margin */
     body {
-      margin: 0;
-      padding: 0;
+      background-size: 100% 100%;
+      background-position: center top;
+      background-repeat: no-repeat;
     }
+
+    
   
   .splash-title {
       font-size: 3rem; /* Smaller font size for title */
@@ -942,8 +945,9 @@
   
     /* Make sure the body also has no margin */
     body {
-      margin: 0;
-      padding: 0;
+      background-size: 100% 100%;
+      background-position: center top;
+      background-repeat: no-repeat;
     }
   
   .splash-title {
