@@ -669,7 +669,7 @@
     }
   }
   
-  @media only screen and (min-device-width: 414px) and (max-device-width: 419px) {
+  @media only screen and (min-device-width: 410px) and (max-device-width: 419px) {
     .invitation-title, .ring-svg-container, .bride-groom-svg-container, .arabic-greeting {
       width: 100%;
       top: 15%;
@@ -855,7 +855,7 @@
   
     .maps-svg-container {
       width: 100% !important; 
-      max-width: 400px !important; 
+      max-width: 380px !important; 
       height: auto !important;
       top: 3%; 
     }
