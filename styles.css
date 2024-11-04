@@ -287,9 +287,7 @@
     position: relative;
     width: 120px !important;
     max-width: 100% !important;
-    left: 40%;
-    
-    margin-bottom: -70px;
+    left: 36%;
   }
   
   
@@ -307,7 +305,6 @@
   
   .bride-groom-svg-container {
     position: relative;
-    margin-top: -80px;
     width: 400px !important;
     max-width: 100% !important;
     
@@ -456,6 +453,7 @@
     .ring-svg-container {
       width: 80px !important;
       max-width: 100% !important;
+      left: 38%;
     }
   
     .bride-groom-svg-container {
