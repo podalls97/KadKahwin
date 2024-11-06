@@ -346,7 +346,7 @@
     position: relative;
     width: 700px !important;
     max-width: 200% !important;
-    margin-top: -50px;
+    margin-top: -65px;
     z-index: 10000;
     
   }
@@ -428,7 +428,7 @@
   
 
   
-  @media only screen and (min-device-width: 410px) and (max-device-width: 425px) {
+  @media (max-width: 433px) {
     .invitation-title, .ring-svg-container, .bride-groom-svg-container, .arabic-greeting {
       width: 100%;
       top: 15%;
@@ -654,4 +654,19 @@
     }
   }
 
+@media (max-width: 375px) {
   
+  .bride-groom-svg-container {
+    width: 300px !important;
+    max-width: 100% !important;
+    left: 3%;
+  }
+
+  .bride-groom-shortname-container {
+    left: 1%;
+  }
+
+  .arabic-greeting, .invitation-title {
+    font-size: 2rem;
+  }
+}
