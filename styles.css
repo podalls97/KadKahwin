@@ -58,6 +58,14 @@
     transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
   }
   
+
+/* Disable scrolling */
+html.no-scroll, body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+
   /* Splash Screen Overlay */
 #splash-screen {
   position: fixed;
@@ -387,6 +395,7 @@
     align-items: center;
     text-align: center;
     padding: 60px 0; /* Increase padding for a more spacious layout */
+    z-index: -1;
   }
   
   .countdown-timer {
