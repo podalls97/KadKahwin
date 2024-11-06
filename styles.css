@@ -245,7 +245,13 @@
   }
   
   
-  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
   
   
   
@@ -255,9 +261,6 @@
   
   .arabic-greeting,
   .invitation-title,
-  .ring-svg-container,
-  .bride-groom-shortname-container,
-  .bride-groom-svg-container,
   .arabic-phrase,
   .majlis-text,
   .save-the-date-svg-container,
@@ -284,36 +287,35 @@
   }
   
   .ring-svg-container {
-    position: relative;
-    width: 120px !important;
-    max-width: 100% !important;
-    left: 36%;
+    width: 120px ;
+    max-width: 100% ;
+    align-items: center;
   }
   
   
   .bride-groom-shortname-container {
     position: relative;
-    width: 400px !important;
-    max-width: 200% !important;
+    width: 400px;
+    max-width: 100%;
+    align-items: center;
   }
   
   .bride-groom-shortname-container img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: inherit;
+    width: 100%;
+    height: auto;
   }
   
   .bride-groom-svg-container {
-    position: relative;
-    width: 400px !important;
-    max-width: 100% !important;
     
+    width: 200px;
+    max-width: 100%;
+    align-items: center;
   }
   
   .bride-groom-svg-container img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: inherit;
+    width: 100%;
+    height: auto;
+    align-items: center;
   }
   
   .arabic-phrase {
@@ -436,29 +438,23 @@
   
     .arabic-greeting {
       font-size: 1.5rem;
-      margin-top: -50%;
+      margin-top: -40%;
     }
   
     .invitation-title {
       font-size: 1.5rem;
     }
   
-    .bride-groom-shortname-container {
-      width: 320px !important;
-      max-width: 100% !important;
-      top: 18%;
-      left: 8%;
-    }
   
     .ring-svg-container {
-      width: 80px !important;
-      max-width: 100% !important;
-      left: 38%;
+      width: 100px;
+      max-width: 100%;
+      margin-top: 20%;
     }
-  
+
     .bride-groom-svg-container {
-      top: 25%;
-      left: -1%;
+      width: 80%;
+      margin-top: 6%;
     }
   
     #splash-screen {
@@ -654,19 +650,8 @@
     }
   }
 
-@media (max-width: 375px) {
-  
-  .bride-groom-svg-container {
-    width: 300px !important;
-    max-width: 100% !important;
-    left: 3%;
+  @media (max-width: 375px) {
+    .bride-groom-shortname-container {
+      width: 95%;
+    }
   }
-
-  .bride-groom-shortname-container {
-    left: 1%;
-  }
-
-  .arabic-greeting, .invitation-title {
-    font-size: 2rem;
-  }
-}
