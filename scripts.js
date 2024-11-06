@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+    document.documentElement.classList.add("no-scroll"); // Add to <html>
+    document.body.classList.add("no-scroll");
     console.log("DOMContentLoaded event fired. Initializing countdown...");
-  
+    
     // Function to update countdown timer
     function updateCountdown() {
       const weddingDate = new Date("November 24, 2024 09:00:00").getTime();
@@ -479,26 +481,26 @@ gsap.timeline({
     const splashScreen = document.getElementById("splash-screen");
     const backgroundBlur = document.getElementById("background-blur");
     const audio = document.getElementById("wedding-song");
-  
+
     // Add the fade-out class to trigger transition
     splashScreen.classList.add("splash-exit");
     backgroundBlur.classList.add("splash-exit");
-  
-    // Remove splash screen and background blur from the DOM after transition
+
+    // Remove splash screen, background blur, and re-enable scrolling after transition
     setTimeout(() => {
-      splashScreen.style.display = "none";
-      backgroundBlur.style.display = "none";
+        splashScreen.style.display = "none";
+        backgroundBlur.style.display = "none";
+        
+        // Remove the no-scroll class to re-enable scrolling
+        document.documentElement.classList.remove("no-scroll"); // Remove from <html>
+        document.body.classList.remove("no-scroll");
     }, 500); // Match this timeout to the CSS transition duration (0.5s)
-  
+
     // Attempt to play audio with unmuting
     audio.muted = true; // Start muted for autoplay permission
     audio.play().then(() => {
-      audio.muted = false; // Unmute if playback starts
+        audio.muted = false; // Unmute if playback starts
     }).catch(error => {
-      console.log("Autoplay was blocked. User interaction required.");
+        console.log("Autoplay was blocked. User interaction required.");
     });
-  }
-  
-  
-  
-  
+}
