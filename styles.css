@@ -244,12 +244,20 @@ html.no-scroll, body.no-scroll {
     right: -1%;
     rotate: -20deg;
   }
+
+  .flower {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
   
   .flower-1 {
     position: absolute;
-    width: 300px;
+    max-width: 100%;
+    width: 200px;
     bottom: 0%;
-    right: 39%;
   }
   
   
