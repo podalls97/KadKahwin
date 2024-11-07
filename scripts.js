@@ -403,7 +403,7 @@ gsap.timeline({
   gsap.timeline({
     scrollTrigger: {
       trigger: ".majlis-text",
-      start: "top 80%",
+      start: "top top",
       end: "bottom top",
       scrub: 3,
       markers: false
@@ -418,7 +418,7 @@ gsap.timeline({
     opacity: 1,
     filter: "blur(0px)",
     duration: 1.5,
-    ease: "power2.out"
+    ease: "power3.out"
   });
   
   // Scroll-triggered animation for the Maps SVG
@@ -446,7 +446,7 @@ gsap.timeline({
   // Scroll-triggered animation for the Instructions
   gsap.timeline({
     scrollTrigger: {
-      trigger: ".instruction6",
+      trigger: ".instruction",
       start: "top 80%",
       end: "bottom top",
       scrub: 3,
